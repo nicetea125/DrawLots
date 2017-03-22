@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<figure *ngIf="!showWin" id="showcase">
+  <section class="{{sI}}"></section>
+  <section class="{{sII}}"></section>
+  <section class="{{sIII}}"></section>
+  <section class="{{sIV}}"></section>  
+</figure>
+<button *ngIf="showStartBtn" md-button (click)="clickStart()" class="startBtn"><md-icon>camera</md-icon></button>
+<img *ngIf="showWin" src="assets/{{winner}}.jpg" class="winImg animated zoomIn" alt="">
