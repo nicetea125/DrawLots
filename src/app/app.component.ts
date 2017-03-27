@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   audio = new Audio('./assets/s.mp3');
 
 
-  intervalms = 3000;
+  intervalms = 7000;
 
   ngOnInit() {
    
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   }
 
   ab(){
-    let timer = Observable.interval(this.intervalms).take(1);
+    let timer = Observable.interval(9000).take(1);
       timer.subscribe( x => {
         this.sI = "b1";
         this.sII = "b2";
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
   showWinner(){
     this.winner = Math.floor((Math.random() * 6) + 1);
     this.showWin = true;
-    this.audioOut();
+    //this.audioOut();
     
   }
 
